@@ -1,0 +1,18 @@
+<section id="blog">
+  <div class="container">
+    <div class="row wow fadeInUp" data-wow-delay="0.3s">
+      <div class="col-md-9 col-lg-9 mx-auto text-center title-section">
+        <h2 class="title">{{ view.getTitle() }}</h2>
+        {% if header %}
+            <p>{{header}}</p>
+         {% endif %}
+      </div>  
+        {% if rows %}
+          {{rows}}
+        {% endif %}
+    </div>
+    {% if pager %}
+      {{ pager }}
+    {% endif %}
+  </div>
+</section>

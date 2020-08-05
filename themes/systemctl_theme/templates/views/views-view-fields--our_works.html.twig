@@ -1,0 +1,38 @@
+<div class="row service-desc-content">
+  {% set position = fields.field_image_position.content%}
+  {% if position == "Right" %}
+    <div class="col-lg-6 col-md-7 col-sm-12">
+      <a href="{{fields.view_node.content}}"><h3>{{fields.title.content}}</h3></a>
+      <p>{{fields.body.content}}</p>
+      <div class="project-details">
+        {{fields.field_summary_project_details.content}}
+      </div>
+      <div class="work-btn">
+        <a href="{{fields.view_node.content}}" class="custom-btn">Launch Details</a> 
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-5 col-sm-12">
+      <div class="hovereffect">
+        {{fields.field_image.content}}
+      </div>
+    </div>
+  {% else %}
+        <div class="col-lg-6 col-md-5 col-sm-12">
+          <div class="hovereffect">
+            {{fields.field_image.content}}
+          </div>  
+        </div>
+        <div class="col-lg-6 col-md-7 col-sm-12">
+          <a href="{{fields.view_node.content}}">
+            <h3>{{fields.title.content}}</h3>
+          </a>
+          <p>{{fields.body.content}}</p>
+          <div class="project-details">
+             {{fields.field_summary_project_details.content}}
+          </div>
+          <div class="work-btn">
+            <a href="{{fields.view_node.content}}" class="custom-btn">Launch Details</a> 
+          </div>
+        </div>
+  {% endif %}
+</div> 

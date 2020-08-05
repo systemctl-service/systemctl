@@ -1,0 +1,18 @@
+ <div class="col-xs-12 col-sm-6 col-lg-6 col-md-12">
+    <div class="blog-box">
+      <div class="hovereffect blogimage">
+        <a href="{{fields.view_node.content}}">
+            {{fields.field_image.content}}
+        </a>
+      </div>
+      <div class="blog-caption">
+        <ul class="grid">
+          <li><span><i class="fa fa-user-circle-o"></i>By {{fields.uid.content}}</span></li>
+          <li><span><i class="fa fa-calendar-o"></i>{{fields.created.content}}</span></li>
+        </ul>
+        <h3><a href="{{fields.view_node.content}}">
+          {{fields.title.content}}</a></h3>
+        <p>{{fields.body.content}}</p>
+      </div>
+    </div>
+</div>

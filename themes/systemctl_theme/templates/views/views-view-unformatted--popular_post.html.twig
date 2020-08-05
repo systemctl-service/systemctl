@@ -1,0 +1,8 @@
+<div class="popular-posts">
+    <h3>{{view.getTitle()}}</h3>
+    <ul  class="grid">
+    	{% for row in rows %}
+    		{{row.content}}
+    	{% endfor %}
+    </ul>
+</div>

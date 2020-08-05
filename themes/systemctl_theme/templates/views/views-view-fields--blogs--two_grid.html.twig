@@ -1,0 +1,19 @@
+<div class="col-lg-6 col-md-6">
+    <div class="blog-box">
+      <div class="hovereffect blogimage">
+        <a href="{{fields.view_node.content}}">
+           {{fields.field_image.content}}
+        </a>
+        <div class="tags"><span><i class="fa fa-calendar-o"></i>{{fields.created.content}}</span></div>
+      </div>
+      <div class="blog-caption">
+        <ul class="grid">
+          <li><span><i class="fa fa-user-circle-o"></i>By {{fields.uid.content}}</span></li>
+          <li><span><i class="fa fa-comment"></i>{{fields.comment_count.content}} Comments</span></li>
+        </ul>
+        <h3><a href="{{fields.view_node.content}}">{{fields.title.content}}</a></h3>
+        {{fields.body.content}}
+        <a href="{{fields.view_node.content}}" class="link">Read More <i class="fa fa-long-arrow-right"></i></a>
+      </div>
+    </div>
+</div>

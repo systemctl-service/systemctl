@@ -1,0 +1,19 @@
+
+	 <!-- blog-section -->
+  	<section id="blog" class="front">
+      <div class="container">
+        <div class="row wow fadeInUp" data-wow-delay="0.3s">
+          <div class="col-md-9 col-lg-9 mx-auto text-center title-section">
+            <h2 class="title">{{ content.field_title.0 }}</h2>
+            <p>{{content.field_description.0}}</p>
+          </div>
+          {{content.field_blogs}}  
+          <div class="blog-btn text-center">
+            <a href="{{content.field_link.0['#url']}}" class="custom-btn">
+              {{content.field_link.0['#title']}}
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- blog-section-end --> 

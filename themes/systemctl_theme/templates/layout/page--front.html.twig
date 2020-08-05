@@ -1,0 +1,122 @@
+  <!-- Topbar -->
+    <section id="topbar" class="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-7 col-lg-7">
+                      <ul class="contact-info">
+                            {% if company_phone_no %}
+                                <li><a href="tel:{{company_phone_no}}"><i class="fa fa-phone" aria-hidden="true"></i>{{company_phone_no}}</a></li>
+                            {% endif %} 
+                            {% if company_email %}
+                                  <li><a href="mailto:{{company_email}}"><i class="fa fa-envelope" aria-hidden="true"></i>{{company_email}}</a></li>
+                            {% endif %}
+                      </ul>
+                </div>
+               <div class="col-xs-6 col-sm-6 col-md-5 col-lg-5">
+                      <ul>
+                          {% if facebook %}
+                              <li><a href="{{facebook}}"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                          {% endif %}
+                          {% if twitter %}
+                              <li><a href="{{twitter}}"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            {% endif %}
+                            {% if linkedin %}
+                              <li><a href="{{linkedin}}"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            {% endif %}
+                            {% if youtube %}
+                                 <li><a href="{{youtube}}"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                            {% endif %}
+                          
+                          {{ drupal_block('language_block:language_interface', wrapper=false) }}
+                      </ul>
+                </div>
+            </div>
+        </div> <!-- end container -->
+    </section> 
+  <!-- end topbar -->
+
+ <!-- Header -->
+    <header>
+      <nav id="menu" class="navbar navbar-expand-lg">
+        <div class="container">
+            <div style="max-width: 500px"> {{page.logo}} </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSCTLCorp" aria-controls="navbarSCTLCorp" aria-expanded="false" aria-label="Toggle navigation"><span class="fa fa-bars"></span></button>
+            {{page.primary_menu}}
+        </nav>
+    </header>
+  <!-- Header End --> 
+
+{% set url = url('<current>') %}
+{% if 'user' in url|render|render %}     
+  <!--Start Slider Area-->
+  <section id="slider" class="slider-area">
+    <div class="item" style="background-image: url(assets/images/slider.jpg)">
+      <div class="overlay"></div>
+      <div class="slide-caption">
+        <div class="slider-inner">
+          <h1 class="animated fadeInUpBig">{{page['#title']}}</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End Slider Area-->
+{% endif %}
+
+{{page.content}}
+
+    <!-- footer start -->
+    <footer>
+        <div class="container">
+            <div class="row footer-top">
+                <div class="col-xl-4 col-lg-3 col-md-6 wow fadeInLeft" data-wow-delay="0.3s">
+                      {{page.footer_col_1}}
+                </div>
+                 <div class="col-xl-2 col-lg-2 col-md-6 wow fadeInDown" data-wow-delay="0.9s">
+                    <div class="pd">
+                      {{page.footer_col_2}}
+                    </div>
+                </div>  
+                <div class="col-xl-3 col-lg-4 col-md-6 contact wow fadeInRight" data-wow-delay="0.12s">
+                    <h2>{{ contact_header }}</h2>
+                    <p><i class="fa fa-map-marker"></i><span>{{company_address}}</span></p>
+                    <a href="mailto:{{company_email}}"><i class="fa fa-envelope"></i>{{company_email}}</a>
+                    <a href="tel:{{company_phone_no}}"><i class="fa fa-phone"></i>{{company_phone_no}}</a>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-6 pd wow fadeInUp" data-wow-delay="0.6s">
+                    <h2>{{social_title}}</h2>
+                    <div class="pd">
+                      <ul class="social">
+                         {% if facebook %}
+                              <li><a href="{{facebook}}"><i class="fa fa-facebook"></i></a></li>
+                          {% endif %}
+                          {% if twitter %}
+                              <li><a href="{{twitter}}"><i class="fa fa-twitter"></i></a></li>
+                          {% endif %}
+                          {% if linkedin %}
+                            <li><a href="{{linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                          {% endif %}
+                          {% if youtube %}
+                            <li><a href="{{youtube}}"><i class="fa fa-youtube"></i></a></li>
+                          {% endif %}
+                      </ul>  
+                    </div>  
+                </div> 
+            </div>    
+        </div>
+        <div class="copyright">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6 mx-auto text-center copyright wow fadeInUp" data-wow-delay="0.5s"> 
+              <p> &copy;2020. <a href="#"> systemctl service</a>.&nbsp;All Rights Reserved.<br></p>
+              <p class="our-info"> Theme By<a href="https://jeronimotavira.github.io/" target="_blank"> Jerónimo</a>, de <a href="#" target="_blank"> SYSTEMCTL</a></p>   
+          </div>  
+            </div>
+          </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+  <!-- back to top button -->
+  <button class="scroll-top scroll-to-target" data-target="html">
+      <span class="fa fa-long-arrow-up"></span>
+  </button>

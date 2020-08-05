@@ -1,0 +1,30 @@
+
+#Theme Section
+main_color: '#7dc412'
+
+#banner Section For User pages and Not found pages
+banner_image: 'themes/systemctl_theme/top-banner.jpg'
+
+# Contact Section
+contact_header: 'Contact '
+company_phone_no: '+34 653 11 22 80'
+company_email: 'info@systemctl.es'
+company_address: 'Calle Arte figurativo #4 , 28051 Madrid'
+
+# Social login Section
+social_title: 'Social'
+facebook: 'https://www.facebook.com'
+twitter: 'https://www.twitter.com'
+linkedin: 'https://www.linkedin.com'
+pinterest: 'https://pinterest.com'
+dribbble: 'https://dribbble.com'
+instagram: 'https://instagram.com'
+youtube: 'https://youtube.com'
+
+
+
+
+
+
+
+

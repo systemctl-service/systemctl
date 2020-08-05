@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+{% if breadcrumb %}
+  <ul class="animated fadeInRightBig">
+    {% for item in breadcrumb %}
+        {% if item.url %}
+          <li>
+            <a href="{{ item.url }}">{{ item.text }}</a>
+            <i class="fa fa-angle-right mx-2"></i>
+          </li>
+        {% else %}
+          <li>
+            {{ item.text }}
+          </li>
+        {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}

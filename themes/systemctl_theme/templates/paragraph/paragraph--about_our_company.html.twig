@@ -1,0 +1,35 @@
+
+
+    <!-- Our mission-vision -->
+    <section id="about" class="our-mission-and-vision">
+      <div class="container">
+        <div class="row">
+          <div class=" col-md-12 col-lg-6 wow fadeInRight" data-wow-delay="0.9s">
+            <h3>{{content.field_title.0}}</h3>
+            <p>{{content.field_description.0}}</p>
+            <div class="mission-vision">  
+              {{content.field_mission_icon.0}}
+              <div class="mission-vision-caption">  
+                <h4>{{content.field_mission_title.0}}</h4>
+                <p>{{content.field_mission_description.0}}</p>
+              </div>
+            </div>
+            <div class="mission-vision">  
+              {{content.field_vision_icon.0}}
+              <div class="mission-vision-caption">  
+                <h4>{{content.field_vision_title.0}}</h4>
+                <p>{{content.field_vision_content.0}}</p>
+              </div>
+            </div>
+          </div>  
+          <div class="col-md-12 col-lg-6 pd wow fadeInLeft" data-wow-delay="0.6s">
+              <img src="{{ file_url(content.field_image['#items'].entity.uri.value)}}"
+                   class="img-fluid" 
+                   alt="{{ content.field_image['#items'].alt }}" 
+                   title="{{ content.field_image['#items'].title }}">
+             <div class="overlay"></div>
+          </div>
+        </div>  
+      </div>
+    </section>
+    <!-- Our mission-vision end -->

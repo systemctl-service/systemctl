@@ -1,0 +1,62 @@
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="row">
+           <div class="col-xl-8 col-lg-8 col-md-12 wow fadeInLeft" data-wow-delay="0.3s">
+            <div class="get-in-touch">
+              <h3>{{content.field_title.0}}</h3>
+              <p>{{content.field_description.0}}</p>
+                {{content.field_contact_form}}
+            </div>
+          </div> 
+          <div class="col-xl-4 col-lg-4 col-md-12 wow fadeInLeft" data-wow-delay="0.3s">
+            <div class="contact-info">
+              <h3>{{content.field_touch_title.0}}</h3>
+              <p>{{content.field_touch_description.0}}</p>
+                <p class="address"><i class="fa fa-map-marker"></i><span>{{content.field_address.0}} <span></p>
+
+                <p class="address"><i class="fa fa-envelope"></i>
+                  <span>
+                    <a href="mailto:{{content.field_primary_email.0}}">
+                      {{content.field_primary_email.0}}
+                    </a>
+                    <a href="mailto:{{content.field_secondary_email.0}}">
+                      {{content.field_secondary_email.0}}
+                    </a>                    
+                  <span>
+                </p>
+                <p class="address"><i class="fa fa-phone"></i>
+                  <span>
+                    <a href="tel:{{content.field_primary_phone_no.0}}">{{content.field_primary_phone_no.0}}</a>
+                    <a href="tel:{{content.field_secondary_phone_no.0}}">{{content.field_secondary_phone_no.0}}</a>
+                  <span>
+                </p>
+            </div>
+            <div class="follow-us">
+              <h3>{{content.field_follow_us_title.0}}</h3>
+                <ul>
+                  {% if content.field_facebook_link.0 %}
+                    <li><a href="{{content.field_facebook_link.0['#url']}}"><i class="fa fa-facebook"></i></a></li>
+                  {% endif %}
+                  {% if content.field_twitter_link.0 %}
+                      <li><a href="{{content.field_twitter_link.0['#url']}}"><i class="fa fa-twitter"></i></a></li>
+                  {% endif %}
+                  {% if content.field_instagram_link.0 %}
+                      <li><a href="{{content.field_instagram_link.0['#url']}}"><i class="fa fa-instagram"></i></a></li>
+                  {% endif %}
+                </ul>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </section>
+    <!-- Contact End -->
+    {% if content.field_map_url.0 %}
+        <!-- Goolgle Map -->
+      <div id="map" class="animate-box" data-animate-effect="fadeIn">
+        <iframe src="{{content.field_map_url.0['#url']}}" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    {% endif %}
+
+    

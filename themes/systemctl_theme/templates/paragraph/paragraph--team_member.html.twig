@@ -1,0 +1,27 @@
+<div class="col-lg-3 col-md-6 col-sm-6">
+    <div class="single-team text-center">
+        <img src="{{ file_url(content.field_member_image['#items'].entity.uri.value)}}"
+         class="img-fluid" 
+         alt="{{ content.field_member_image['#items'].alt }}" 
+         title="{{ content.field_member_image['#items'].title }}">
+
+        <div class="team-info">  
+             <div class="hover-content text-center">
+                <p>{{content.field_description.0}}</p>
+              <div class="team-social">
+                {% if content.field_facebook.0['#url'] %}
+                    <a href="{{content.field_facebook.0['#url']}}"><i class="fa fa-facebook"></i></a>
+                {% endif %}
+                {% if content.field_twitter.0['#url'] %}
+                    <a href="{{content.field_twitter.0['#url']}}"><i class="fa fa-twitter"></i></a>
+                {% endif %}
+                {% if content.field_instagram.0['#url'] %}
+                    <a href="{{content.field_instagram.0['#url']}}"><i class="fa fa-instagram"></i></a>
+                {% endif %}
+              </div>
+          </div>
+          <h5>{{content.field_member_name.0}}</h5>
+          <span>{{content.field_member_designation.0}}</span>  
+        </div>
+    </div>
+</div>

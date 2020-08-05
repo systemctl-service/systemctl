@@ -1,0 +1,16 @@
+ <!-- testimonial -->
+    <section id="testimonial" class="service-testimonial testimonial-front">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-8 col-md-9 mx-auto text-center">
+            <div class="col-md-12 title-section wow fadeInUp" data-wow-delay="0.3s"><h2 class="title">{{view.getTitle()}}</h2></div>    
+            <div class="testimonial-carousel wow fadeInDown" data-wow-delay="0.6s">
+              {% for row in rows %}
+                {{row.content}}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonial end--> 

@@ -1,0 +1,23 @@
+<!-- About-us -->
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class=" col-md-12 col-lg-6 wow fadeInRight" data-wow-delay="0.9s">
+          <h3>{{content.field_title.0}}</h3>
+          {{content.field_content.0}}
+          <div class="about-btn">
+            <a href="{{content.field_link.0['#url']}}" class="custom-btn">{{content.field_link.0['#title']}}</a>
+          </div>  
+        </div>
+        <div class="col-md-12 col-lg-6 wow fadeInLeft" data-wow-delay="0.6s">
+          <div class="hovereffect">
+             <img src="{{ file_url(content.field_image['#items'].entity.uri.value)}}"
+                 class="img-fluid" 
+                 alt="{{ content.field_image['#items'].alt }}" 
+                 title="{{ content.field_image['#items'].title }}">
+          </div>  
+        </div>
+      </div>  
+    </div>
+  </section>
+  <!-- about part end -->

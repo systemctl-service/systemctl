@@ -1,0 +1,17 @@
+
+<!-- other-project   -->
+<div id="blog" class="other-project">
+  <div class="container">
+    <div class="row wow fadeInUp" data-wow-delay="0.3s">
+      <div class="col-md-9 col-lg-9 mx-auto text-center title-section">
+        <h2 class="title">{{view.getTitle()}}</h2>
+      </div>  
+      <div class="other-project-items">  
+        {% for row in rows %}
+          {{row.content}}
+        {% endfor %}
+      </div>  
+    </div>
+  </div>
+</div> 
+<!-- other-project-end -->

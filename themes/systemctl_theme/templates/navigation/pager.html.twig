@@ -1,0 +1,32 @@
+{% if items %}
+   <nav>
+      <ul class="pagination text-center grid">
+      {# Print previous item if we are not on the first page. #}
+      {% if items.previous %}        
+        <li><a href="{{ items.previous.href }}" aria-label="Previous">Prev</a></li>
+     {% endif %}
+      {# Add an ellipsis if there are further previous pages. #}
+      {% if ellipses.previous %}
+        <li class="page-item" role="presentation">&hellip;</li>
+      {% endif %}
+      {# Now generate the actual pager piece. #}
+      {% for key, item in items.pages %}
+        <li class="{{ current == key ? 'active' : '' }}">
+          <a href="{{ item.href }}" >
+            {{- key -}}
+          </a>
+        </li>
+      {% endfor %}
+      {# Add an ellipsis if there are further next pages. #}
+      {% if ellipses.next %}
+        <li class="page-item" role="presentation">&hellip;</li>
+      {% endif %}
+      {# Print next item if we are not on the last page. #}
+      {% if items.next %}
+        <li>
+            <a href="{{ items.next.href }}" aria-label="Next">Next</a>
+        </li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}
